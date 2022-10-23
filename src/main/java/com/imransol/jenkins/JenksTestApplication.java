@@ -17,8 +17,9 @@ public class JenksTestApplication {
 	}
 	
 	public static void main(String[] args) {
-		log.info("Application executed..");
+		
 		SpringApplication.run(JenksTestApplication.class, args);
+		log.info("Application executed..");
 	}
 
 }
