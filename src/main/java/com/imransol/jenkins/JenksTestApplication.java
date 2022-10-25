@@ -1,6 +1,7 @@
 package com.imransol.jenkins;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import org.slf4j.*;
 import org.springframework.boot.SpringApplication;
@@ -21,5 +22,9 @@ public class JenksTestApplication {
 		SpringApplication.run(JenksTestApplication.class, args);
 		log.info("Application executed..");
 	}
-
+	
+	@PreDestroy
+	public void stop() {
+		log.info("Application stopped..");
+	}
 }
